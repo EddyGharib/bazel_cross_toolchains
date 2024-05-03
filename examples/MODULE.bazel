@@ -1,0 +1,14 @@
+module(name = "examples", version = "1.0.0", compatibility_level = 1)
+
+bazel_dep(name = "bazel_cross_toolchains", version = "0.0.0")
+local_path_override(
+    module_name = "bazel_cross_toolchains",
+    path = "..",
+)
+
+arm_toolchains = use_extension("@bazel_cross_toolchains//extensions.bzl", "arm_toolchains")
+
+register_toolchains(
+    "@bazel_cross_toolchains//toolchain:cc_toolchain_for_linux_x86_64",
+    "@bazel_cross_toolchains//toolchain:cc_toolchain_for_linux_aarch64",
+)
