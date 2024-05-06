@@ -87,7 +87,8 @@ def _impl(ctx):
                             flags = [
                                 "--target=aarch64-pc-linux-gnu",
                                 "-fPIC",
-                                "-std=c++2b"
+                                "-std=c++2b",
+                                "-D _GLIBCXX_USE_TBB_PAR_BACKEND=0",
                             ],
                         ),
                     ]),
