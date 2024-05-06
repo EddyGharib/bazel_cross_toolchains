@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 6,
-  "moduleFileHash": "19dcfa8f2e82ba0a9ee37f62eda9b32d8177b6978ace2715074011ca85ef82c4",
+  "moduleFileHash": "253bb30ff4d828113fa80df556f510fb7af7b60e04109e32859f50e2d6e56b94",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -25,7 +25,7 @@
       "executionPlatformsToRegister": [],
       "toolchainsToRegister": [
         "@bazel_cross_toolchains//toolchain:cc_toolchain_for_linux_x86_64",
-        "@bazel_cross_toolchains//toolchain:cc_toolchain_for_linux_aarch64"
+        "@bazel_cross_toolchains//toolchain:cc_toolchain_for_u22_aarch64"
       ],
       "extensionUsages": [
         {

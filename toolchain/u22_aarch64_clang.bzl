@@ -70,7 +70,6 @@ def _impl(ctx):
                                 "-fuse-ld=/usr/aarch64-linux-gnu/bin/ld",
                                 "--target=aarch64-pc-linux-gnu",
                                 "-lstdc++",
-                                "--sysroot=/usr/aarch64-linux-gnu",
                             ],
                         ),
                     ]),

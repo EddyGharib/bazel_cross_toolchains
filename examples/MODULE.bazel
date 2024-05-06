@@ -10,5 +10,5 @@ arm_toolchains = use_extension("@bazel_cross_toolchains//extensions.bzl", "arm_t
 
 register_toolchains(
     "@bazel_cross_toolchains//toolchain:cc_toolchain_for_linux_x86_64",
-    "@bazel_cross_toolchains//toolchain:cc_toolchain_for_linux_aarch64",
+    "@bazel_cross_toolchains//toolchain:cc_toolchain_for_u22_aarch64",
 )

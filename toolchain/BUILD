@@ -7,7 +7,7 @@ load(":u22_aarch64_clang.bzl", "aarch64_toolchain_config")
 # load(":u22_aarch64_gcc.bzl", "aarch64_toolchain_config")
 
 x86_64_toolchain_config(name = "linux_x86_64_toolchain_config")
-aarch64_toolchain_config(name = "linux_aarch64_toolchain_config")
+aarch64_toolchain_config(name = "u22_aarch64_toolchain_config")
 
 cc_toolchain(
     name = "linux_x86_64_toolchain",
@@ -37,9 +37,9 @@ toolchain(
 )
 
 cc_toolchain(
-    name = "linux_aarch64_toolchain",
+    name = "u22_aarch64_toolchain",
     toolchain_identifier = "linux_aarch64-toolchain",
-    toolchain_config = ":linux_aarch64_toolchain_config",
+    toolchain_config = ":u22_aarch64_toolchain_config",
     all_files = ":empty",
     compiler_files = ":empty",
     dwp_files = ":empty",
@@ -50,8 +50,8 @@ cc_toolchain(
 )
 
 toolchain(
-    name = "cc_toolchain_for_linux_aarch64",
-    toolchain = ":linux_aarch64_toolchain",
+    name = "cc_toolchain_for_u22_aarch64",
+    toolchain = ":u22_aarch64_toolchain",
     toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
     exec_compatible_with = [
         "@platforms//cpu:x86_64",
