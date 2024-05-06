@@ -101,6 +101,7 @@ def _impl(ctx):
         features = features,
         cxx_builtin_include_directories = [
             "/usr/lib/llvm-14/lib/clang/14.0.0/include",
+            "/usr/lib/clang/17/include",
             "/usr/aarch64-linux-gnu/include",
             # "/usr/lib/gcc-cross/aarch64-linux-gnu/11",
             "/aarch64_fs/usr/include",
