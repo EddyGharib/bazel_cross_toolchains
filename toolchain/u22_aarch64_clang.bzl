@@ -69,6 +69,7 @@ def _impl(ctx):
                             flags = [
                                 "-fuse-ld=/usr/aarch64-linux-gnu/bin/ld",
                                 "--target=aarch64-pc-linux-gnu",
+                                "-lstdc++",
                             ],
                         ),
                     ]),
@@ -85,9 +86,9 @@ def _impl(ctx):
                         flag_group(
                             flags = [
                                 "--target=aarch64-pc-linux-gnu",
-                                "-isystem /aarch64_fs/usr/include/c++/11/",
                                 "-fPIC",
-                                "-std=c++2b"
+                                "-std=c++2b",
+                                "-D _GLIBCXX_USE_TBB_PAR_BACKEND=0",
                             ],
                         ),
                     ]),
@@ -103,8 +104,7 @@ def _impl(ctx):
             "/usr/lib/llvm-14/lib/clang/14.0.0/include",
             "/usr/lib/clang/17/include",
             "/usr/aarch64-linux-gnu/include",
-            # "/usr/lib/gcc-cross/aarch64-linux-gnu/11",
-            "/aarch64_fs/usr/include",
+            "/usr/aarch64-linux-gnu/include/c++/11",
         ],
         toolchain_identifier = "aarch64-toolchain",
         host_system_name = "local",
